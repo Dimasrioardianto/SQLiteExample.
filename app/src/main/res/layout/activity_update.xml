@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -31,39 +30,23 @@
         android:id="@+id/tvNIM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/cari_mahasiswa"
+        android:text="@string/nim"
         android:textStyle="bold"
         android:layout_below="@+id/tvJudul"
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"/>
 
-    <LinearLayout
-        android:id="@+id/llCariNIM"
+    <EditText
+        android:id="@+id/etNIM"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="@string/masukan_nim"
+        android:autofillHints=""
+        android:inputType="number"
         android:layout_below="@+id/tvNIM"
-        android:orientation="horizontal"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp">
-
-        <EditText
-            android:id="@+id/etNIM"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:minHeight="48dp"
-            android:hint="@string/masukan_nim"
-            android:autofillHints=""
-            android:inputType="number" />
-
-        <ImageButton
-            android:id="@+id/btnCari"
-            android:layout_width="54dp"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:contentDescription="@string/cari_mahasiswa"
-            android:src="@drawable/baseline_person_search_24"/>
-    </LinearLayout>
+        android:layout_marginEnd="16dp"/>
 
     <TextView
         android:id="@+id/tvNama"
@@ -71,7 +54,7 @@
         android:layout_height="wrap_content"
         android:text="@string/nama"
         android:textStyle="bold"
-        android:layout_below="@+id/llCariNIM"
+        android:layout_below="@+id/etNIM"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"/>
 
@@ -132,4 +115,5 @@
             android:layout_weight="0.5"/>
 
     </LinearLayout>
+
 </RelativeLayout>
