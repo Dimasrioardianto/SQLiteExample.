@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnCari.setOnClickListener {
             val nama = binding.etNama.text.toString()
             if(nama.isEmpty()){
-                Toast.makeText(this, "Silah masukan nama terlebih dahulu!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Silahkan masukan nama terlebih dahulu!", Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
             }
             val students = studentDBHelper.searchStudentByName(nama)
@@ -30,10 +30,10 @@ class MainActivity : AppCompatActivity() {
             students.forEach {
                 val tvUser = TextView(this)
                 tvUser.textSize = 20F
-                tvUser.text = "${it.nim} - ${it.name}(${it.age}ahun)"
+                tvUser.text = "${it.nim} - ${it.name}(${it.age} tahun)"
                 binding.llData.addView(tvUser)
             }
-            binding.tvHasilPencarian.text = "Ditemukan${students.size} mahasiswa"
+            binding.tvHasilPencarian.text = "Ditemukan ${students.size} mahasiswa"
         }
 
         binding.btnTambah.setOnClickListener {
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             tvUser.text = "${it.nim} - ${it.name}(${it.age} Tahun)"
             binding.llData.addView(tvUser)
         }
-        binding.tvHasilPencarian.text = "Total ${students.size}mahasiswa"
+        binding.tvHasilPencarian.text = "Total ${students.size} mahasiswa"
         binding.swipeRefresh.isRefreshing = false
     }
 

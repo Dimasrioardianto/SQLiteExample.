@@ -24,7 +24,7 @@ class CreateActivity : AppCompatActivity() {
             val name = binding.etNama.text.toString()
             val age = binding.etUmur.text.toString()
             if(nim.isEmpty() || name.isEmpty() || age.isEmpty()){
-                Toast.makeText(this, "Silah masukan data nim, nama, dan umur!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Silahkan masukan data nim, nama, dan umur!", Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
             }
             val newStudent = StudentModel(nim = nim, name = name, age
